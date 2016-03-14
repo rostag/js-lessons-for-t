@@ -6,8 +6,8 @@
 
 	console.log(collection1.getSize());
 	console.log(collection1.getItem(5));
-	console.log(collection1.filterParam([{skill: 'javascript'}, {gender: 'Male'}]));
-	console.log(collection1.filterBy([{skill: 'javascript'}, {gender: 'Male'}], 'age'));
+	logItems(collection1.filterParam([{skill: 'javascript'}, {gender: 'Male'}]));
+	logItems(collection1.filterBy([{skill: 'javascript'}, {gender: 'Male'}], 'age'));
 	//logItems(collection1.simpleFilter('skill', 'javascript'))
 	//var filtered = collection1.filterBy([{skill: 'c++'}, {gender: 'Female'}]);
 	//logItems(filtered);

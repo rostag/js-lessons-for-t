@@ -15,9 +15,7 @@ Collection.prototype.getSize = function() {
 	console.log(this.getItems)
 };
 
-Collection.prototype.sortByField = function(field) {
-	var list = this.getItems().concat();
-
+Collection.prototype.sortByField = function(list, field) {
 	function byField (user1, user2) {
 		return user1[field] < user2[field] ? -1 : 1;
 	}
@@ -50,9 +48,9 @@ function filterBy(a1, a2, a3) {
 	} 
 	if (arguments.length == 2 && typeof a1 === 'object') {
 		list = this.filterParam(a1);
-		list = this.sortByField(a2);
+		list = this.sortByField(list, a2);
 	}
-		return list;
+	return list;
 }
 
 function filterParam(param1) { //param1 = [{skill: 'javascript'}, {gender: 'male'}]// objFilters = {skill: "javascript", gender: "Male"}
@@ -66,7 +64,6 @@ function filterParam(param1) { //param1 = [{skill: 'javascript'}, {gender: 'male
 		}
 	return list;
 }
-
 
 Collection.prototype.filterBy = filterBy;
 Collection.prototype.simpleFilter = simpleFilter;
