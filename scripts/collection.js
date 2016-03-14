@@ -23,7 +23,7 @@ Collection.prototype.sortByField = function(list, field) {
 	return list.sort(byField);
 };
 
-function logItems(items) {
+Collection.logItems = function (items) {
 	var str = 'Items: ';
 	items.forEach(function(item) {
 		str += '\nUser Age: ' + item.age + ', First Name: ' + item.first_name + ', gender: ' + item.gender + ', Skill: ' + item.skill;
