@@ -32,13 +32,13 @@ function logItems(items) {
 	return str;
 }
 
-function simpleFilter (list, fieldName, fieldValue) {  // фильтрует из массива элементов те, у которых поле fieldName  
+Collection.prototype.simpleFilter = function simpleFilter (list, fieldName, fieldValue) {  // фильтрует из массива элементов те, у которых поле fieldName  
 	var filtered = list.filter(function(user){      // имеет значение fieldValue
 		return user[fieldName] === fieldValue;
 	});
 	return filtered;
 }
-function filterBy(a1, a2, a3) {
+Collection.prototype.filterBy = function(a1, a2, a3) {
 	var list = this.getItems().concat(),
 		objFilters,
 		self = this;
@@ -53,7 +53,7 @@ function filterBy(a1, a2, a3) {
 	return list;
 }
 
-function filterParam(param1) { //param1 = [{skill: 'javascript'}, {gender: 'male'}]// objFilters = {skill: "javascript", gender: "Male"}
+Collection.prototype.filterParam = function(param1) { //param1 = [{skill: 'javascript'}, {gender: 'male'}]// objFilters = {skill: "javascript", gender: "Male"}
 	var list = this.getItems().concat(),
 		objFilters,
 		self = this;
@@ -64,13 +64,6 @@ function filterParam(param1) { //param1 = [{skill: 'javascript'}, {gender: 'male
 		}
 	return list;
 }
-
-Collection.prototype.filterBy = filterBy;
-Collection.prototype.simpleFilter = simpleFilter;
-Collection.prototype.filterParam = filterParam;
-
-	//for (var index = 0; index < length; index ++) {
-	//	functionlist[index].field;
 
 /*
 если в функцию передан второй/третий аргумент в виде строки - это значит, отфильтрованный результат надо 
