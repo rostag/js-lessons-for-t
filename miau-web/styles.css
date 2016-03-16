@@ -1,0 +1,24 @@
+#header, #content, #footer{
+	width: 1000px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+#header{
+	background: #c9daf8ff;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+#content main{
+	float: left;
+	width: 70%;
+	background: #CBF6FF
+}
+#content aside{
+	float: right;
+	background: #F5FFCA
+
+}
+#footer{
+	background: #C2BEBD;
+
+}
