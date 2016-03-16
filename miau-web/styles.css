@@ -1,0 +1,34 @@
+#header, #content, #footer{
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+#header{
+	background: #c9daf8;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+/* Make Equal Height for Article and Aside */
+
+#content { 
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+#content article{
+	flex: 2;
+	background: #CBF6FF;
+}
+#content aside{
+	flex: 1;
+	background: #F5FFCA;
+}
+#footer{
+	background: #C2BEBD;
+
+#footer{
+	background: #c2bebd;
+}
